@@ -2,18 +2,15 @@ import pandas as pd
 import numpy as np
 import os
 from sklearn.model_selection import train_test_split
-# from sklearn import svm
-# from sklearn import neighbors
-# from sklearn import datasets, linear_model
-# from sklearn import preprocessing
-#from sklearn import datasets, linear_model
-# thay đổi cách gọi thư viện
-from sklearn.metrics import svm,neighbors,datasets, linear_model,preprocessing
-import matplotlib.pyplot as plt# thư viện này để vẽ hình, trong code không có đoạn nào vẽ nên có thể xóa
+from sklearn import svm
+from sklearn import neighbors
+from sklearn import datasets, linear_model
+from sklearn import preprocessing
+import matplotlib.pyplot as plt
 import pickle
+from sklearn.metrics import mean_squared_error, r2_score
 
-
-xlsFile = pd.read_excel('data.xlsx')
+xlsFile = pd.read_excel('tinhdiemtb.xlsx')
 xlsMat =  xlsFile.values
 
 # load data from xlsx file
